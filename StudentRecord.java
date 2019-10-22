@@ -13,9 +13,13 @@ public class StudentRecord
     *  whose subscripts are between first and last, inclusive
     *  PRECONDITION: 0 <= first <= last < scores.length
     */
-   private double average(int first, int last)
-   {
-      return 0; //here so the class compiles
+   public double average(int first, int last)
+   {  double avg = 0.0;
+       for(int i=first;i<=last;i++){
+         avg+=scores[i-1];
+      } 
+      avg/=(last-first+1);
+      return avg; //here so the class compiles
    }
     
    /** returns true if each successive value in scores is greater than
