@@ -43,12 +43,12 @@ public class StudentRecord
     */
    public double finalAverage()
    {  double total = 0.0;
-      int numbers = (scores.length+1)/2;
+      int numbers = (scores.length)/2;
       if(hasImproved()==true){
          for(int i=numbers;i<scores.length;i++){
              total+=scores[i];
             }
-         total/=numbers;
+         total/=(scores.length+1)/2;
          return total;
         }
       return average(1,scores.length); //here so the class compiles
